@@ -66,14 +66,22 @@ fun MyGallery() {
 
 @Composable
 fun MyPicture(modifier: Modifier = Modifier) {
-    Image(
-        painter = painterResource(id = R.drawable.puppy),
-        contentDescription = stringResource(R.string.puppy),
-        contentScale = ContentScale.Fit,
-        modifier = modifier
-            .padding(20.dp)
-            .shadow(elevation = 10.dp)
-    )
+    Column(
+        modifier = modifier.padding(20.dp)
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.puppy),
+            contentDescription = stringResource(R.string.puppy),
+            contentScale = ContentScale.Fit,
+            modifier = Modifier
+                .weight(0.9f)
+                .shadow(elevation = 10.dp)
+        )
+        Text(
+            text = stringResource(id = R.string.puppy_source),
+            modifier = Modifier.weight(0.1f)
+        )
+    }
 }
 
 @Composable
