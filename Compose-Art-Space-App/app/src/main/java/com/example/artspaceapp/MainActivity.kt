@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MyGallery(modifier: Modifier = Modifier) {
+fun MyGallery() {
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
