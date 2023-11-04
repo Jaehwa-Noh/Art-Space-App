@@ -37,9 +37,15 @@ fun MyGallery(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        MyPicture()
-        PictureArtistAndName()
-        NextAndPreviousButton()
+        MyPicture(
+            modifier = Modifier.weight(0.7f)
+        )
+        PictureArtistAndName(
+            modifier = Modifier.weight(0.2f)
+        )
+        NextAndPreviousButton(
+            modifier = Modifier.weight(0.1f)
+        )
     }
 }
 
@@ -54,7 +60,9 @@ fun PictureArtistAndName(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun NextAndPreviousButton() {
+fun NextAndPreviousButton(
+    modifier: Modifier = Modifier
+) {
 
 }
 
