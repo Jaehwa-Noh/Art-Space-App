@@ -20,7 +20,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
@@ -55,7 +54,7 @@ class MainActivity : ComponentActivity() {
 fun MyGallery() {
     Column(
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = CenterHorizontally
     ) {
         MyPicture(
             modifier = Modifier.weight(0.7f)
@@ -128,7 +127,27 @@ fun PictureArtistAndName(modifier: Modifier = Modifier) {
 fun NextAndPreviousButton(
     modifier: Modifier = Modifier
 ) {
-
+    Row(
+        modifier = modifier.padding(20.dp)
+    ) {
+        Button(
+            onClick = { },
+            modifier = Modifier.weight(0.5f)
+        ) {
+            Text(
+                text = stringResource(R.string.previous)
+            )
+        }
+        Spacer(modifier = Modifier.width(24.dp))
+        Button(
+            onClick = { },
+            modifier = Modifier.weight(0.5f)
+        ) {
+            Text(
+                text = stringResource(R.string.next)
+            )
+        }
+    }
 }
 
 @Preview(showBackground = true)
