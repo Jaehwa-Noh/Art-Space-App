@@ -88,7 +88,7 @@ fun MyGallery() {
             listOf(
                 R.drawable.school,
                 R.string.school_source,
-                R.string.cloth_artist,
+                R.string.school_source,
                 R.string.school,
                 R.string.school_year
             )
