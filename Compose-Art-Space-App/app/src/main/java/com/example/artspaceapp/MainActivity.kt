@@ -150,7 +150,7 @@ fun MyPicture(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(top = 24.dp)
+            .padding(top = 24.dp, start = 20.dp, end = 20.dp)
     ) {
         Image(
             painter = painterResource(id = painterId),
@@ -158,17 +158,16 @@ fun MyPicture(
             contentScale = ContentScale.Fit,
             modifier = Modifier
                 .align(CenterHorizontally)
+                .fillMaxWidth()
                 .weight(0.9f)
                 .border(width = 3.dp, color = Color.LightGray)
                 .shadow(elevation = 10.dp)
                 .background(Color.White)
-                .padding(horizontal = 20.dp)
         )
         Text(
             text = stringResource(id = sourceId),
             modifier = Modifier
                 .weight(0.1f)
-                .padding(horizontal = 20.dp)
         )
     }
 }
