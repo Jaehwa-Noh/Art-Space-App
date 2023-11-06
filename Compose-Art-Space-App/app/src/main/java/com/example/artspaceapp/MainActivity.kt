@@ -3,6 +3,7 @@ package com.example.artspaceapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.Image
@@ -64,15 +65,33 @@ fun MyGallery() {
 
     val (currentPainterId: Int, currentSourceId: Int, currentArtistId: Int, currentArtTitleId: Int, currentArtYearId: Int) = when (currentPage) {
         0 -> {
-            listOf(R.drawable.puppy, R.string.puppy_source, R.string.puppy_artist, R.string.puppy, R.string.puppy_year)
+            listOf(
+                R.drawable.puppy,
+                R.string.puppy_source,
+                R.string.puppy_artist,
+                R.string.puppy,
+                R.string.puppy_year
+            )
         }
 
         1 -> {
-            listOf(R.drawable.cloth, R.string.cloth_source, R.string.cloth_artist, R.string.cloth, R.string.cloth_year)
+            listOf(
+                R.drawable.cloth,
+                R.string.cloth_source,
+                R.string.cloth_artist,
+                R.string.cloth,
+                R.string.cloth_year
+            )
         }
 
         else -> {
-            listOf(R.drawable.school, R.string.school_source, R.string.cloth_artist, R.string.school, R.string.school_year)
+            listOf(
+                R.drawable.school,
+                R.string.school_source,
+                R.string.cloth_artist,
+                R.string.school,
+                R.string.school_year
+            )
         }
     }
 
@@ -81,6 +100,9 @@ fun MyGallery() {
         horizontalAlignment = CenterHorizontally
     ) {
         MyPicture(
+            painterId = currentPainterId,
+            describeId = currentArtTitleId,
+            sourceId = currentSourceId,
             modifier = Modifier.weight(0.7f)
         )
         PictureArtistAndName(
@@ -119,15 +141,20 @@ internal fun currentPageUpdate(isNext: Boolean, currentPage: Int): Int {
 }
 
 @Composable
-fun MyPicture(modifier: Modifier = Modifier) {
+fun MyPicture(
+    @DrawableRes painterId: Int,
+    @StringRes describeId: Int,
+    @StringRes sourceId: Int,
+    modifier: Modifier = Modifier
+) {
     Column(
         modifier = modifier
             .fillMaxWidth()
             .padding(top = 24.dp)
     ) {
         Image(
-            painter = painterResource(id = R.drawable.puppy),
-            contentDescription = stringResource(R.string.puppy),
+            painter = painterResource(id = painterId),
+            contentDescription = stringResource(id = describeId),
             contentScale = ContentScale.Fit,
             modifier = Modifier
                 .align(CenterHorizontally)
@@ -138,7 +165,7 @@ fun MyPicture(modifier: Modifier = Modifier) {
                 .padding(horizontal = 20.dp)
         )
         Text(
-            text = stringResource(id = R.string.puppy_source),
+            text = stringResource(id = sourceId),
             modifier = Modifier
                 .weight(0.1f)
                 .padding(horizontal = 20.dp)
