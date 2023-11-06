@@ -20,7 +20,6 @@ The main branch is the main directory.
 
 # My Result (내 결과물)
 ## 프로젝트 실행 이미지
-<!--
 | Compose | SwiftUI |
 | :---------------: | :---------------: |
-| <img src="https://github.com/shwoghk14/Business-card-app/assets/48680511/67f977bb-c823-4cd6-b1e9-4b9366980b78" width="300" /> | <img src="https://github.com/shwoghk14/Business-card-app/assets/48680511/936c83b0-ad8f-4854-92ed-0bcdb1d1f456" width="300" /> | -->
+| <img src="https://github.com/shwoghk14/Art-Space-App/assets/48680511/498f6bc0-346e-4919-9b7d-b03b154a053b" width="300" /> | <!-- <img src="" width="300" /> -->
