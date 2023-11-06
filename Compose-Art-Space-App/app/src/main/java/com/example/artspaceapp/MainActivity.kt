@@ -3,6 +3,7 @@ package com.example.artspaceapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -82,7 +83,8 @@ fun MyGallery() {
     }
 }
 
-fun currentPageUpdate(isNext: Boolean, currentPage: Int): Int {
+@VisibleForTesting
+internal fun currentPageUpdate(isNext: Boolean, currentPage: Int): Int {
     var newCurrentPage = currentPage
     if (isNext) {
         newCurrentPage++

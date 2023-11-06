@@ -11,7 +11,34 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun nextButton_2To0() {
+        val isNext = true
+        var currentPage = 2
+        currentPage = currentPageUpdate(isNext = isNext, currentPage = currentPage)
+        assertEquals(0, currentPage)
+    }
+
+    @Test
+    fun nextButton_0To1() {
+        val isNext = true
+        var currentPage = 0
+        currentPage = currentPageUpdate(isNext = isNext, currentPage = currentPage)
+        assertEquals(1, currentPage)
+    }
+
+    @Test
+    fun previousButton_2To1() {
+        val isNext = false
+        var currentPage = 2
+        currentPage = currentPageUpdate(isNext = isNext, currentPage = currentPage)
+        assertEquals(1, currentPage)
+    }
+
+    @Test
+    fun previousButton_0To2() {
+        val isNext = false
+        var currentPage = 0
+        currentPage = currentPageUpdate(isNext = isNext, currentPage = currentPage)
+        assertEquals(2, currentPage)
     }
 }
