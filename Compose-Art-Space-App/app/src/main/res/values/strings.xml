@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ArtSpaceApp</string>
+    <string name="puppy">어미개와 강아지(모견도)</string>
+    <string name="puppy_artist">이암</string>
+    <string name="puppy_year">미상</string>
+    <string name="puppy_source">From 국립중앙박물관</string>
+    <string name="cloth">복식화</string>
+    <string name="cloth_artist">미상</string>
+    <string name="cloth_year">미상</string>
+    <string name="cloth_source">From 국립중앙박물관</string>
+    <string name="school">서당, 《단원 풍속도첩》</string>
+    <string name="school_artist">김홍도</string>
+    <string name="school_year">1970</string>
+    <string name="school_source">From 국립중앙박물관</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+</resources>
