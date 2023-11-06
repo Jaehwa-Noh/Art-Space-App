@@ -105,6 +105,7 @@ fun MyPicture(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxWidth()
+            .padding(top = 24.dp)
     ) {
         Image(
             painter = painterResource(id = R.drawable.puppy),
