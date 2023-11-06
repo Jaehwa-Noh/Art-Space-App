@@ -20,6 +20,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
@@ -52,6 +56,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyGallery() {
+    var currentPage: Int by remember {
+        mutableIntStateOf(0)
+    }
+
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = CenterHorizontally
@@ -63,9 +71,31 @@ fun MyGallery() {
             modifier = Modifier.weight(0.2f)
         )
         NextAndPreviousButton(
+            onNextClick = {
+                currentPage = currentPageUpdate(isNext = true, currentPage)
+            },
+            onPreviousClick = {
+                currentPage = currentPageUpdate(isNext = false, currentPage)
+            },
             modifier = Modifier.weight(0.1f)
         )
     }
+}
+
+fun currentPageUpdate(isNext: Boolean, currentPage: Int): Int {
+    var newCurrentPage = currentPage
+    if (isNext) {
+        newCurrentPage++
+        newCurrentPage %= 3
+    } else {
+        if (currentPage == 0) {
+            newCurrentPage = 2
+        } else {
+            newCurrentPage--
+            newCurrentPage %= 3
+        }
+    }
+    return newCurrentPage
 }
 
 @Composable
@@ -73,7 +103,6 @@ fun MyPicture(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxWidth()
-
     ) {
         Image(
             painter = painterResource(id = R.drawable.puppy),
@@ -125,13 +154,15 @@ fun PictureArtistAndName(modifier: Modifier = Modifier) {
 
 @Composable
 fun NextAndPreviousButton(
+    onNextClick: () -> Unit,
+    onPreviousClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier.padding(20.dp)
     ) {
         Button(
-            onClick = { },
+            onClick = onPreviousClick,
             modifier = Modifier.weight(0.5f)
         ) {
             Text(
@@ -140,7 +171,7 @@ fun NextAndPreviousButton(
         }
         Spacer(modifier = Modifier.width(24.dp))
         Button(
-            onClick = { },
+            onClick = onNextClick,
             modifier = Modifier.weight(0.5f)
         ) {
             Text(
