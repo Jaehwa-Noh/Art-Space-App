@@ -3,6 +3,7 @@ package com.example.artspaceapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -61,6 +62,20 @@ fun MyGallery() {
         mutableIntStateOf(0)
     }
 
+    val (currentPainterId: Int, currentSourceId: Int, currentArtistId: Int, currentArtTitleId: Int, currentArtYearId: Int) = when (currentPage) {
+        0 -> {
+            listOf(R.drawable.puppy, R.string.puppy_source, R.string.puppy_artist, R.string.puppy, R.string.puppy_year)
+        }
+
+        1 -> {
+            listOf(R.drawable.cloth, R.string.cloth_source, R.string.cloth_artist, R.string.cloth, R.string.cloth_year)
+        }
+
+        else -> {
+            listOf(R.drawable.school, R.string.school_source, R.string.cloth_artist, R.string.school, R.string.school_year)
+        }
+    }
+
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = CenterHorizontally
@@ -69,6 +84,9 @@ fun MyGallery() {
             modifier = Modifier.weight(0.7f)
         )
         PictureArtistAndName(
+            artTitleId = currentArtTitleId,
+            artistNameId = currentArtistId,
+            artYearId = currentArtYearId,
             modifier = Modifier.weight(0.2f)
         )
         NextAndPreviousButton(
@@ -129,7 +147,12 @@ fun MyPicture(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun PictureArtistAndName(modifier: Modifier = Modifier) {
+fun PictureArtistAndName(
+    @StringRes artTitleId: Int,
+    @StringRes artistNameId: Int,
+    @StringRes artYearId: Int,
+    modifier: Modifier = Modifier
+) {
     Column(
         modifier = modifier
             .fillMaxWidth()
@@ -139,16 +162,16 @@ fun PictureArtistAndName(modifier: Modifier = Modifier) {
             .padding(20.dp)
     ) {
         Text(
-            text = stringResource(id = R.string.puppy),
+            text = stringResource(id = artTitleId),
             fontSize = 28.sp
         )
 
         Row {
             Text(
-                text = stringResource(id = R.string.puppy_artist),
+                text = stringResource(id = artistNameId),
                 fontWeight = FontWeight.Bold,
             )
-            Text(text = " (" + stringResource(id = R.string.puppy_year) + ")")
+            Text(text = " (" + stringResource(id = artYearId) + ")")
         }
 
     }
