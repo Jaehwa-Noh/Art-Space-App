@@ -25,6 +25,7 @@ struct MyGallary: View {
 
 struct MyPicture: View {
     var body: some View {
+        Spacer()
         VStack(alignment: .leading) {
             Image("puppy")
                 .resizable()
@@ -62,6 +63,7 @@ struct PictureArtistAndName: View {
 
 struct NextAndPreviousButton: View {
     var body: some View {
+        Spacer()
         HStack {
             Button {
                 
