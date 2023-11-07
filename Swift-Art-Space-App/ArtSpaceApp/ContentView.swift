@@ -31,6 +31,7 @@ struct MyPicture: View {
                 .scaledToFit()
                 .frame(maxWidth: .infinity, maxHeight: 400)
                 .background(Color.white)
+                .border(Color.teal, width: 3)
                 .shadow(radius: 10)
             Text("From: ")
         }
