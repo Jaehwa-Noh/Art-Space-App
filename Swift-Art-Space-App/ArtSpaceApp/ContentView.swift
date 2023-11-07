@@ -62,7 +62,23 @@ struct PictureArtistAndName: View {
 
 struct NextAndPreviousButton: View {
     var body: some View {
-        Text("")
+        HStack {
+            Button {
+                
+            } label: {
+                Text("Previous")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+            Button {
+                
+            } label: {
+                Text("Next")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+        }
+        .padding(20)
     }
 }
 
