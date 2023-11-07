@@ -41,7 +41,22 @@ struct MyPicture: View {
 
 struct PictureArtistAndName: View {
     var body: some View {
-        Text("")
+        VStack(alignment: .leading) {
+            HStack {
+                Text("어미개와 강아지")
+                    .font(.system(size: 28))
+                Spacer()
+            }
+            HStack {
+                Text("이암")
+                    .fontWeight(.bold)
+                Text("(미정)")
+                Spacer()
+            }
+        }
+        .padding(20)
+        .background(Material.ultraThick)
+        .padding(.horizontal, 20)
     }
 }
 
