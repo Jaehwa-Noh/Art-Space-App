@@ -130,7 +130,7 @@ struct NextAndPreviousButton: View {
         .padding(20)
     }
     
-    private func updateCurrentPage(isNext: Bool, currentPage: Int) -> Int {
+    internal func updateCurrentPage(isNext: Bool, currentPage: Int) -> Int {
         var newPage = currentPage
         if isNext {
             newPage += 1

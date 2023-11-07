@@ -11,7 +11,18 @@
 		CF1DCE392AF921B100DEBD19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DCE382AF921B100DEBD19 /* ContentView.swift */; };
 		CF1DCE3B2AF921B300DEBD19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1DCE3A2AF921B300DEBD19 /* Assets.xcassets */; };
 		CF1DCE3E2AF921B300DEBD19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1DCE3D2AF921B300DEBD19 /* Preview Assets.xcassets */; };
+		CFB883E12AFA171400EC3032 /* ArtSpaceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB883E02AFA171400EC3032 /* ArtSpaceAppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFB883E22AFA171400EC3032 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF1DCE2B2AF921B100DEBD19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF1DCE322AF921B100DEBD19;
+			remoteInfo = ArtSpaceApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CF1DCE332AF921B100DEBD19 /* ArtSpaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtSpaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +30,19 @@
 		CF1DCE382AF921B100DEBD19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF1DCE3A2AF921B300DEBD19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1DCE3D2AF921B300DEBD19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFB883DE2AFA171400EC3032 /* ArtSpaceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtSpaceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB883E02AFA171400EC3032 /* ArtSpaceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtSpaceAppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CF1DCE302AF921B100DEBD19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB883DB2AFA171400EC3032 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				CF1DCE352AF921B100DEBD19 /* ArtSpaceApp */,
+				CFB883DF2AFA171400EC3032 /* ArtSpaceAppTests */,
 				CF1DCE342AF921B100DEBD19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				CF1DCE332AF921B100DEBD19 /* ArtSpaceApp.app */,
+				CFB883DE2AFA171400EC3032 /* ArtSpaceAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +89,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CFB883DF2AFA171400EC3032 /* ArtSpaceAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFB883E02AFA171400EC3032 /* ArtSpaceAppTests.swift */,
+			);
+			path = ArtSpaceAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +117,24 @@
 			productReference = CF1DCE332AF921B100DEBD19 /* ArtSpaceApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CFB883DD2AFA171400EC3032 /* ArtSpaceAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB883E42AFA171400EC3032 /* Build configuration list for PBXNativeTarget "ArtSpaceAppTests" */;
+			buildPhases = (
+				CFB883DA2AFA171400EC3032 /* Sources */,
+				CFB883DB2AFA171400EC3032 /* Frameworks */,
+				CFB883DC2AFA171400EC3032 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFB883E32AFA171400EC3032 /* PBXTargetDependency */,
+			);
+			name = ArtSpaceAppTests;
+			productName = ArtSpaceAppTests;
+			productReference = CFB883DE2AFA171400EC3032 /* ArtSpaceAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					CF1DCE322AF921B100DEBD19 = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					CFB883DD2AFA171400EC3032 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = CF1DCE322AF921B100DEBD19;
 					};
 				};
 			};
@@ -116,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				CF1DCE322AF921B100DEBD19 /* ArtSpaceApp */,
+				CFB883DD2AFA171400EC3032 /* ArtSpaceAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +180,13 @@
 			files = (
 				CF1DCE3E2AF921B300DEBD19 /* Preview Assets.xcassets in Resources */,
 				CF1DCE3B2AF921B300DEBD19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB883DC2AFA171400EC3032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFB883DA2AFA171400EC3032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB883E12AFA171400EC3032 /* ArtSpaceAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFB883E32AFA171400EC3032 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF1DCE322AF921B100DEBD19 /* ArtSpaceApp */;
+			targetProxy = CFB883E22AFA171400EC3032 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CF1DCE3F2AF921B300DEBD19 /* Debug */ = {
@@ -324,6 +400,42 @@
 			};
 			name = Release;
 		};
+		CFB883E52AFA171400EC3032 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H64278R9T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = starlight.jaehwa.ArtSpaceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtSpaceApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ArtSpaceApp";
+			};
+			name = Debug;
+		};
+		CFB883E62AFA171400EC3032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H64278R9T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = starlight.jaehwa.ArtSpaceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtSpaceApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ArtSpaceApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,6 +453,15 @@
 			buildConfigurations = (
 				CF1DCE422AF921B300DEBD19 /* Debug */,
 				CF1DCE432AF921B300DEBD19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB883E42AFA171400EC3032 /* Build configuration list for PBXNativeTarget "ArtSpaceAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB883E52AFA171400EC3032 /* Debug */,
+				CFB883E62AFA171400EC3032 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
