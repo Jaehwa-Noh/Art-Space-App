@@ -25,7 +25,16 @@ struct MyGallary: View {
 
 struct MyPicture: View {
     var body: some View {
-        Text("")
+        VStack(alignment: .leading) {
+            Image("puppy")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: 400)
+                .background(Color.white)
+                .shadow(radius: 10)
+            Text("From: ")
+        }
+        .padding(20)
     }
 }
 
