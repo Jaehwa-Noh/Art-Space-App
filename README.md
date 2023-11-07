@@ -22,4 +22,4 @@ The main branch is the main directory.
 ## 프로젝트 실행 이미지
 | Compose | SwiftUI |
 | :---------------: | :---------------: |
-| <img src="https://github.com/shwoghk14/Art-Space-App/assets/48680511/498f6bc0-346e-4919-9b7d-b03b154a053b" width="300" /> | <!-- <img src="" width="300" /> -->
+| <img src="https://github.com/shwoghk14/Art-Space-App/assets/48680511/498f6bc0-346e-4919-9b7d-b03b154a053b" width="300" /> | <img src="https://github.com/shwoghk14/Art-Space-App/assets/48680511/512e72e9-3cbf-4268-9469-37d9d704cc20" width="300" /> |
