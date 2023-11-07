@@ -9,13 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        MyGallary()
+    }
+}
+
+struct MyGallary: View {
+    var body: some View {
+        VStack(alignment: .center) {
+            MyPicture()
+            PictureArtistAndName()
+            NextAndPreviousButton()
         }
-        .padding()
+    }
+}
+
+struct MyPicture: View {
+    var body: some View {
+        Text("")
+    }
+}
+
+struct PictureArtistAndName: View {
+    var body: some View {
+        Text("")
+    }
+}
+
+struct NextAndPreviousButton: View {
+    var body: some View {
+        Text("")
     }
 }
 
